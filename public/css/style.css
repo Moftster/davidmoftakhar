@@ -15,5 +15,109 @@ nav{
     padding: 5px 20px;
 }
 
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    /* text-decoration:underline; */
+    font-weight: 600;
+}
+
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+
+.menu li a{
+    display: block;
+}
+
+.logo a{
+    font-size: 20px;
+}
+
+/* Mobile menu */
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item{
+    width: 100%;
+    text-align: center;
+    order: 2;
+    display: none;
+}
+
+.item.active{
+    display: block;
+}
 
 
+.toggle{
+    cursor: pointer;
+    order: 1;
+}
+
+.bars{
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+}
+
+.bars::before, .bars::after{
+    background: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+}
+
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
+}
+
+/* Tablet menu */
+
+@media all and (min-width:600px){
+    .item{
+     width: auto;
+     display: block;
+    }
+
+    .logo{
+       flex:1; 
+    }
+
+    .toggle{
+        display: none;
+    }
+
+}
+
+@media all and (min-width:900px) {
+    .logo{
+        margin-left: 5em;
+        /* display: none; */
+    }
+
+    .menu{
+        margin-right: 5em;
+    }
+}
