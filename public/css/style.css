@@ -1,8 +1,19 @@
-.nav-bar-custom{
-    background-color: #F8F9FA;
-    
+/* CUSTOME FLEXBOX NAV BAR */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-items {
-    padding-left: 2em;
+body{
+    font-family: sans-serif;
 }
+
+nav{
+    background-color: #E0E0E0;
+    padding: 5px 20px;
+}
+
+
+
